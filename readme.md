@@ -18,6 +18,8 @@ $ gradle shadowJar
 $ java -jar build/libs/dynamic-number-allocation-service.jar server /path/to/config/file.yml
 
 ```
+If you don't want to provide any configuration file, then make sure that your `redis` instance is up and running at `localhost` on default port.
+
 Examples
 ---
 
