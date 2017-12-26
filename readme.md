@@ -11,12 +11,28 @@ Requirements
 
 Running the code
 ---
-```$xslt
+```sh
 $ git clone https://github.com/lunar-logan/dynamic-number-allocation-service.git
 $ cd dynamic-number-allocation-service
 $ gradle shadowJar 
 $ java -jar build/libs/dynamic-number-allocation-service.jar server /path/to/config/file.yml
 
 ```
+Examples
+---
 
+**Sample request**
+```sh
+curl -X PUT \
+  'http://localhost:8080/phone-number/allocate?preferred=1111111124' \
+  -H 'accept: */*' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json'
+  
+```
+
+**Sample response**
+```bash
+111-111-1136
+```
 License: [The Unlicense](http://unlicense.org/)
